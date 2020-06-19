@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gjirafa JavaScript Assessment</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="videoContainer">
+            <a class="videoLink" id="posterVideo">
+                <img id="startVideoIcon" src="assets/initialStartVideo.png" />
+                <video id="video"></video>
+            </a>
+            <div class="videoControls">
+                <a class="videoControlsItem" id="playPause" onclick="onPlayPauseVideo()">
+                    <p>Play</p>
+                    <img class="playPauseIcon" src="assets/play.png" />
+                </a>
+                <a class="videoControlsItem" id="muteUnmute" onclick="onMuteUnmuteVideo()">
+                    <p>Mute</p>
+                    <img class="muteUnmuteIcon" src="assets/mute.png" />
+                </a>
+                <a class="videoControlsItem" id="back10s" onclick="seekVideo('back')">
+                    <p>- 10 sec</p>
+                    <img class="seekMinusIcon" src="assets/seekMinus10.png" />
+                </a>
+                <a class="videoControlsItem" id="frw10s" onclick="seekVideo('forward')">
+                    <p>+ 10 sec</p>
+                    <img class="seekPlusIcon" src="assets/seekPlus10.png" />
+                </a>
+                <a class="videoControlsItem" id="fullScreen" onclick="fullScreenControl()">
+                    <p>FullScreen</p>
+                    <img class="fullScreenVideo" src="assets/fullScreen.png" />
+                </a>
+                <a class="videoControlsItem" id="autoPlay" onclick="autoPlayControl()">
+                    <p>Autoplay: On</p>
+                </a>
+            </div>
+        </div>
+        <div id="relatedVideos">
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="scripts/fetchData.js"></script>
+<script type="text/javascript" src="scripts/relatedVideos.js"></script>
+<script type="text/javascript" src="scripts/controlVideo.js"></script>
+
+</html>
